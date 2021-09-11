@@ -1,0 +1,221 @@
+/* Start Global Rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    --webkit-box-sizing:border-box ;
+}
+:root{
+    --section-padding:100px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* End Global Rules */
+.main-heading h2{
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.main-heading{
+    text-align: center;
+}
+.main-heading  p{
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+/* Start Landing Page  */
+.banner{
+    font-family: Roboto;
+    width: 100%;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) ,url('../img/op.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 1px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #eee;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #5be366;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.35s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+/* End Landing Page  */
+/* start content*/
+.content{
+    content: '';
+    width: 100%;
+    position: absolute;
+    top: 50%;;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 200;
+    line-height: 20px;
+}
+button{
+    width:200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px ;
+    border-radius: 25px ;
+    font-weight: bold;
+    border: 2px solid #5be366;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #5be366;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+   position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.35s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover {
+    border: none;
+}
+/* END content*/
+ /* SRV */
+.services{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+@media (min-width:768px){
+    .services .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+        grid-column-gap: 40px;
+        grid-row-gap:60px ;
+    }
+}
+.services .srv-box{
+    display: flex;
+
+}
+
+.services .srv-box i{
+    margin-right: 40px;
+    margin-left: 20px;
+}
+@media (max-width:767px){
+     .services .srv-box{
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+     }
+.services .srv-box i {
+    margin: 0 0 30px;
+
+}
+}
+.services .srv-box h3{
+  margin-bottom:30px ;
+  color: #5be366;
+  font-size: 25px;
+}
+.services .srv-box p{
+    line-height: 2;
+    color: #777;
+    font-size: 15px;
+}
+ /* SRV*/
+ /* Start Footer */
+ .footer{
+     margin-top: 100px;
+     margin-bottom: -100px;
+     padding-top: 100px;
+     padding-bottom: 100px;
+    background-image: url("../img/vb.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    }
+    .footer::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0 0 0 / 70%);
+    }
+    .footer .container{
+        position: relative;
+    }
+    .footer img{
+        margin-top: 20px;
+    }
+    .footer p:not(.copyright) {
+        text-transform: uppercase;
+         padding:20px; 
+        font-size: 22px;
+         
+         margin-bottom: 20px auto; 
+    }
+    .footer .social-icon i{
+       padding: 10px 15px;
+    }
+    .footer .copyright{
+        margin-top: 60px;
+    }
+    .footer .copyright span{
+        font-weight: bold;
+    }
+ /* End Footer */
+ 
